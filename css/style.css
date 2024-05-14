@@ -44,6 +44,14 @@ body {
     background-color: blueviolet;
     line-height: 20px;
 }
+.sm-container {
+    margin: 20px 60px;
+    border: 2px solid black;
+    padding: 20px;
+    border-radius: 12px;
+    /* background-color: blueviolet; */
+    line-height: 20px;
+}
 
 main {
     box-sizing: border-box !important;
