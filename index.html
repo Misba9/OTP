@@ -315,7 +315,7 @@
                     Upload
                     <div class="tooltip-arrow" data-popper-arrow></div>
                 </div>
-                <button data-tooltip-target="tooltip-profile" type="button"
+                <button onclick="account()" data-tooltip-target="tooltip-profile" type="button"
                     class="inline-flex flex-col items-center justify-center px-5 rounded-e-full hover:bg-gray-50 dark:hover:bg-gray-800 group">
                     <svg class="w-9 h-9 mb-1 text-gray-500 dark:text-gray-400 group-hover:text-blue-600 dark:group-hover:text-blue-500"
                         aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor"
@@ -336,6 +336,7 @@
     </footer>
     <!-- footer code here end -->
     <script>
+        // this js is for account copy to clipboard
         function CopyToClipboard(sample) {
             var r = document.createRange();
             r.selectNode(document.getElementById(sample));
@@ -343,6 +344,10 @@
             window.getSelection().addRange(r);
             document.execCommand('copy');
             window.getSelection().removeAllRanges();
+        }
+        // button redirect function
+        function account() {//for main page
+             window.location.href = "pages/account/";
         }
     </script>
 </body>
