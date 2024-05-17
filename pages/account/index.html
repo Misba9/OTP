@@ -61,7 +61,7 @@
         <main class="space">
         <div class="grid grid-cols-1 gap-8 p-4 lg:grid-cols-2 xl:grid-cols-4">
             <!-- Value card -->
-            <div class="flex items-center justify-between p-4 bg-white rounded-md dark:bg-darker">
+            <div class="flex items-center justify-between p-4 bg-white rounded-md dark:bg-darker" style="box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;">
                 
               <div>
                 <h6 class="text-xs font-medium leading-none tracking-wider text-gray-500 uppercase dark:text-primary-light">
@@ -82,7 +82,7 @@
             </div>
 
             <!-- Users card -->
-            <div class="flex items-center justify-between p-4 bg-white rounded-md dark:bg-darker">
+            <div class="flex items-center justify-between p-4 bg-white rounded-md dark:bg-darker" style="box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;">
               <div>
                 <h6 class="text-xs font-medium leading-none tracking-wider text-gray-500 uppercase dark:text-primary-light">
                   Total deposit
@@ -102,7 +102,7 @@
             </div>
 
             <!-- Orders card -->
-            <div class="flex items-center justify-between p-4 bg-white rounded-md dark:bg-darker">
+            <div class="flex items-center justify-between p-4 bg-white rounded-md dark:bg-darker" style="box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;">
               <div>
                 <h6 class="text-xs font-medium leading-none tracking-wider text-gray-500 uppercase dark:text-primary-light">
                   Recharge - Life Time
@@ -122,7 +122,7 @@
             </div>
 
             <!-- Tickets card -->
-            <div class="flex items-center justify-between p-4 bg-white rounded-md dark:bg-darker">
+            <div class="flex items-center justify-between p-4 bg-white rounded-md dark:bg-darker" style="box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;">
               <div>
                 <h6 class="text-xs font-medium leading-none tracking-wider text-gray-500 uppercase dark:text-primary-light">
                     Number Purchased - -Life Time
@@ -263,6 +263,13 @@
         function home() {//for main page
              window.location.href = "../../";
         }
+
+        var navItems = document.querySelectorAll(".nav-btn");
+for (var i = 0; i < navItems.length; i++) {
+   navItems[i].addEventListener("click", function() {
+      this.classList.add("active");
+   });
+}
     </script>
 </body>
 
