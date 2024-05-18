@@ -506,6 +506,24 @@ a:nth-child(7){
 }
 
 /* footer css start*/
+.px-5 {
+    padding-left: 0.25rem !important;
+    padding-right: 0.25rem !important;
+}
+.transition-colors {
+    transition-property: background-color, border-color, color, fill, stroke;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+    transition-duration: 150ms;
+}
+.text-primary-lighter {
+    color: var(--color-primary-lighter);
+}
+.rounded-full {
+    border-radius: 9999px;
+}
+.p-2 {
+    padding: 0.5rem;
+}
 /* .footer{
     display:none ;
     visibility: hidden;
