@@ -32,7 +32,7 @@
             </a> -->
       <a class="btn nav-btn mov" id="nav-tab" href="../../" type="submit"><i
           class="fa-solid fa-house nav-icon"></i>Home</a>
-      <a class="btn nav-btn mov" type="submit"><i class="fa-solid fa-building-columns nav-icon"></i>Get Bank</a>
+      <a href="../get-bank/" class="btn nav-btn mov" type="submit"><i class="fa-solid fa-building-columns nav-icon"></i>Get Bank</a>
       <a class="btn nav-btn mov" type="submit"><i class="fa-regular fa-envelope nav-icon"></i>Get sms</a>
       <a class="btn nav-btn mov" type="submit"><i class="fa-solid fa-cloud-arrow-up nav-icon"></i>Upload</a>
       <a class="btn nav-btn mov" type="submit"><i class="fa-solid fa-credit-card nav-icon"></i>Transaction</a>
@@ -50,7 +50,7 @@
           </path>
         </svg>
       </button>
-      <div class="dropdown account-profile">
+      <!-- <div class="dropdown account-profile">
         <button class="btn nav-btn" type="button" id="dropdownMenu2" data-toggle="dropdown" aria-haspopup="true"
           aria-expanded="false">
           <img class=" w-10 h-10 rounded-full"
@@ -61,7 +61,7 @@
           <button onclick="account()" class="dropdown-item" type="button">Your Profile</button>
           <button onclick="login()" class="dropdown-item" type="button">Login</button>
         </div>
-      </div>
+      </div> -->
     </div>
   </nav>
   <!-- nav bar code here end -->
@@ -77,11 +77,12 @@
         <p class="mt-1 truncate text-xs leading-5 text-white-500">leslie.alexander@example.com</p>
       </div>
     </div>
-    <p class="card-txt mn" style="font-size: 1.5rem;"> Balance : <span class="right">₹10,000</span>
+    <p class="card-txt mn" style="font-size: 1.5rem;">Account Id : <span title="click to copy" id="sample" class="right" onclick="CopyToClipboard('sample');return false;">7735000
+      <i class="fa-solid fa-copy "></i>
+    </span>
     </p>
-    <h6 class="bal card-txt">Account Id :<span title="click to copy" id="sample"
-        onclick="CopyToClipboard('sample');return false;">7735000 <i class="fa-solid fa-copy nav-btn"></i></span>
-      <a class="btn-outline-success wit-btn right">withdrawal</a>
+    <h6 class="bal card-txt">Balance :  <span>₹10,000 </span>
+      <div class="btn-outline-success wit-btn right">withdrawal</div>
     </h6>
   </div>
   <!-- top container end -->
@@ -98,9 +99,9 @@
             Total withdrawal
           </h6>
           <span class="text-xl font-semibold">₹30,000</span>
-          <span class="inline-block px-2 py-px ml-2 text-xs text-green-500 bg-green-100 rounded-md">
+          <!-- <span class="inline-block px-2 py-px ml-2 text-xs text-green-500 bg-green-100 rounded-md">
             +4.4%
-          </span>
+          </span> -->
         </div>
         <div>
           <span>
@@ -122,9 +123,6 @@
             Total deposit
           </h6>
           <span class="text-xl font-semibold">₹50,021</span>
-          <span class="inline-block px-2 py-px ml-2 text-xs text-green-500 bg-green-100 rounded-md">
-            +2.6%
-          </span>
         </div>
         <div>
           <span>
@@ -146,9 +144,6 @@
             Recharge - Life Time
           </h6>
           <span class="text-xl font-semibold">₹45,021</span>
-          <span class="inline-block px-2 py-px ml-2 text-xs text-green-500 bg-green-100 rounded-md">
-            +3.1%
-          </span>
         </div>
         <div>
           <span>
@@ -169,9 +164,6 @@
             Number Purchased - -Life Time
           </h6>
           <span class="text-xl font-semibold">0</span>
-          <span class="inline-block px-2 py-px ml-2 text-xs text-green-500 bg-green-100 rounded-md">
-            +3.1%
-          </span>
         </div>
         <div>
           <span>
@@ -205,7 +197,7 @@
           </svg>
           <span class="sr-only">Home</span>Home
         </button>
-        <button data-tooltip-target="tooltip-bank" type="button"
+        <button onclick="getbank()" data-tooltip-target="tooltip-bank" type="button"
           class="inline-flex flex-col items-center justify-center px-5 hover:bg-gray-50 dark:hover:bg-gray-800 group">
           <svg
             class="w-9 h-7 mb-1 text-gray-500 dark:text-gray-400 group-hover:text-blue-600 dark:group-hover:text-blue-500"
@@ -270,14 +262,14 @@
     function home() {//for main page
       window.location.href = "../../";
     }
-    function home() {//for main page
-      window.location.href = "../../";
+    function notification() {//for main page
+      window.location.href = "../";
+    }
+    function getbank() {//for main page
+      window.location.href = "../get-bank/";
     }
     function home() {//for main page
-      window.location.href = "../../";
-    }
-    function home() {//for main page
-      window.location.href = "../../";
+      window.location.href = "";
     }
     function home() {//for main page
       window.location.href = "../../";

@@ -165,14 +165,14 @@ a:nth-child(2){
     width: 160px;
 }
 a:nth-child(3){
-    width: 120px;
+    width: 130px;
 }
 .nav .start-home,a:nth-child(3):hover ~ .animation{
     left: 295px;
     width: 130px;
 }
 a:nth-child(4){
-    width: 120px;
+    width: 130px;
 }
 .nav .start-home,a:nth-child(4):hover ~ .animation{
     left: 430px;
