@@ -42,20 +42,23 @@
                 <img src="" alt="logo" width="30" height="24" class="d-inline-block align-text-top ">Navbar
             </a> -->
             <a class="btn nav-btn mov" id="nav-tab" type="submit"><i class="fa-solid fa-house nav-icon"></i>Home</a>
-            <a href="pages/get-bank/" class="btn nav-btn mov" type="submit"><i class="fa-solid fa-building-columns nav-icon"></i>Get
+            <a href="pages/get-bank/" class="btn nav-btn mov" type="submit"><i
+                    class="fa-solid fa-building-columns nav-icon"></i>Get
                 Bank</a>
             <a class="btn nav-btn mov" type="submit"><i class="fa-regular fa-envelope nav-icon"></i>Get sms</a>
             <a class="btn nav-btn mov" type="submit"><i class="fa-solid fa-cloud-arrow-up nav-icon"></i>Upload</a>
             <a class="btn nav-btn mov" type="submit"><i class="fa-solid fa-credit-card nav-icon"></i>Transaction</a>
 
-            <!-- <a class="btn nav-btn" type="submit"><i class="fa-solid fa-bell "></i></a> -->
-            <!-- <i class="fa-solid fa-user"></i> -->
-            <!-- <img class="h-9 w-9 flex-none rounded-full bg-gray-50" src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80" alt=""> -->
-            <!-- <i class="fa-solid fa-user "></i> -->
 
-            <a href="pages/" class="btn nav-btn">
-                <i class="fa-solid fa-bell "></i>
-            </a>
+            <div class="animation start-home"></div>
+        </form>
+        <div class="nav-right">
+            <button onclick="notification()" @click="openNotificationsPanel" class="p-2 transition-colors duration-200 rounded-full text-primary-lighter bg-primary-50 hover:text-primary hover:bg-primary-100 dark:hover:text-light dark:hover:bg-primary-dark dark:bg-dark focus:outline-none focus:bg-primary-100 dark:focus:bg-primary-dark focus:ring-primary-darker">
+                <span class="sr-only">Open Notification panel</span>
+                <svg class="w-7 h-7" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 17h5l-1.405-1.405A2.032 2.032 0 0118 14.158V11a6.002 6.002 0 00-4-5.659V5a2 2 0 10-4 0v.341C7.67 6.165 6 8.388 6 11v3.159c0 .538-.214 1.055-.595 1.436L4 17h5m6 0v1a3 3 0 11-6 0v-1m6 0H9"></path>
+                </svg>
+              </button>
             <div class="dropdown">
                 <button class="btn nav-btn" type="button" id="dropdownMenu2" data-toggle="dropdown" aria-haspopup="true"
                     aria-expanded="false">
@@ -68,11 +71,11 @@
                     <button onclick="login()" class="dropdown-item" type="button">Login</button>
                 </div>
             </div>
-
-            
-            <div class="animation start-home"></div>
-        </form>
+        </div>
     </nav>
+    <style>
+        
+    </style>
     <!-- nav bar code here end -->
 
     <main class="mui-style-i25zsa">
@@ -84,10 +87,12 @@
                             Receiving SMS Codes and Registering at any Platform</h1>
                         <p class="MuiTypography-root MuiTypography-body1 mui-style-15nsdbm">When registering on social
                             media platforms, messengers, C2C platforms, and other websites, users may be required to
-                            complete SMS verification. With Drawal Cash offers a way to bypass said verification thanks to temporary
+                            complete SMS verification. With Drawal Cash offers a way to bypass said verification thanks
+                            to temporary
                             virtual phone numbers — you no longer have to rely on your actual phone number. Create
                             multiple accounts on various platforms by receiving a verification code online.</p>
-                        <h2 class="MuiTypography-root MuiTypography-body1 mui-style-1k8enp3" id="about">About  With Drawal Cash</h2>
+                        <h2 class="MuiTypography-root MuiTypography-body1 mui-style-1k8enp3" id="about">About With
+                            Drawal Cash</h2>
                         <div class="mui-style-1t9yloc">
                             <div class="mui-style-vu0c92"><img
                                     alt="Over 500,000 Numbers Originating from Around 180 Countries Online"
@@ -134,7 +139,8 @@
                                     <h3 class="MuiTypography-root MuiTypography-body1 mui-style-1a5pgu1">Low Commission
                                         Fees</h3>
                                     <p class="MuiTypography-root MuiTypography-body1 mui-style-1p0kdaq">Add funds to
-                                        your  With Drawal Cash balance while spending as little as you can on commission fees via
+                                        your With Drawal Cash balance while spending as little as you can on commission
+                                        fees via
                                         Visa/Mastercard/MIR, QIWI, UnionPay, KakaoPay, etc.</p>
                                 </div>
                             </div>
@@ -259,14 +265,16 @@
                         <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
                             d="m4 12 8-8 8 8M6 10.5V19a1 1 0 0 0 1 1h3v-3a1 1 0 0 1 1-1h2a1 1 0 0 1 1 1v3h3a1 1 0 0 0 1-1v-8.5" />
                     </svg>
-                   Home
+                    Home
                 </button>
                 <button data-tooltip-target="tooltip-bank" type="button"
                     class="inline-flex flex-col items-center justify-center px-1 hover:bg-gray-50 dark:hover:bg-gray-800 group">
                     <svg class="w-9 h-7 mb-1 text-gray-500 dark:text-gray-400 group-hover:text-blue-600 dark:group-hover:text-blue-500"
                         aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 20 20">
-                        <path d="M11.074 4 8.442.408A.95.95 0 0 0 7.014.254L2.926 4h8.148ZM9 13v-1a4 4 0 0 1 4-4h6V6a1 1 0 0 0-1-1H1a1 1 0 0 0-1 1v13a1 1 0 0 0 1 1h17a1 1 0 0 0 1-1v-2h-6a4 4 0 0 1-4-4Z" />
-                        <path d="M19 10h-6a2 2 0 0 0-2 2v1a2 2 0 0 0 2 2h6a1 1 0 0 0 1-1v-3a1 1 0 0 0-1-1Zm-4.5 3.5a1 1 0 1 1 0-2 1 1 0 0 1 0 2ZM12.62 4h2.78L12.539.41a1.086 1.086 0 1 0-1.7 1.352L12.62 4Z" />
+                        <path
+                            d="M11.074 4 8.442.408A.95.95 0 0 0 7.014.254L2.926 4h8.148ZM9 13v-1a4 4 0 0 1 4-4h6V6a1 1 0 0 0-1-1H1a1 1 0 0 0-1 1v13a1 1 0 0 0 1 1h17a1 1 0 0 0 1-1v-2h-6a4 4 0 0 1-4-4Z" />
+                        <path
+                            d="M19 10h-6a2 2 0 0 0-2 2v1a2 2 0 0 0 2 2h6a1 1 0 0 0 1-1v-3a1 1 0 0 0-1-1Zm-4.5 3.5a1 1 0 1 1 0-2 1 1 0 0 1 0 2ZM12.62 4h2.78L12.539.41a1.086 1.086 0 1 0-1.7 1.352L12.62 4Z" />
                     </svg>
                     Bank
                 </button>
@@ -313,6 +321,9 @@
         }
         function login() {//for main page
             window.location.href = "auth/login/";
+        }
+        function notification() {//for main page
+            window.location.href = "pages/";
         }
     </script>
 </body>
