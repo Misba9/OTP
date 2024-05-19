@@ -54,10 +54,12 @@ main {
     padding: 8px 12px;
     border-radius: .25rem;
 }
-.wit-btn:hover{
+
+.wit-btn:hover {
     background-color: #07ac07 !important;
     color: #000000;
 }
+
 .card-txt {
     font-size: 1.19rem;
     font-weight: 500;
