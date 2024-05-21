@@ -11,6 +11,7 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.3.0/flowbite.min.js"></script>
     <link href="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.3.0/flowbite.min.css" rel="stylesheet" />
     <link rel="stylesheet" href="../../css/style.css">
+    <link rel="stylesheet" href="../../css/pages.css">
     <!-- for icons -->
     <script src="https://kit.fontawesome.com/08aec0b5cd.js" crossorigin="anonymous"></script>
 
@@ -30,9 +31,6 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css"
         integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
 </head>
-<style>
-
-</style>
 
 <body>
     <!-- nav bar code here start -->
@@ -41,12 +39,13 @@
             <!-- <a class="navbar-brand ">
                 <img src="" alt="logo" width="30" height="24" class="d-inline-block align-text-top ">Navbar
             </a> -->
-            <a class="btn nav-btn mov" id="nav-tab" type="submit"><i class="fa-solid fa-house nav-icon"></i>Home</a>
-            <a href="pages/get-bank/" class="btn nav-btn mov" type="submit"><i
+            <a href="../../" class="btn nav-btn mov" id="nav-tab" type="submit"><i
+                    class="fa-solid fa-house nav-icon"></i>Home</a>
+            <a href="../get-bank/" class="btn nav-btn mov" type="submit"><i
                     class="fa-solid fa-building-columns nav-icon"></i>Get
                 Bank</a>
             <a class="btn nav-btn mov" type="submit"><i class="fa-regular fa-envelope nav-icon"></i>Get sms</a>
-            <a href="../upload/" class="btn nav-btn mov" type="submit"><i class="fa-solid fa-cloud-arrow-up nav-icon"></i>Upload</a>
+            <a class="btn nav-btn mov" type="submit"><i class="fa-solid fa-cloud-arrow-up nav-icon"></i>Upload</a>
             <a class="btn nav-btn mov" type="submit"><i class="fa-solid fa-credit-card nav-icon"></i>Transaction</a>
 
 
@@ -82,12 +81,38 @@
     </style>
     <!-- nav bar code here end -->
 
+    <!-- main body contain start -->
+    <div class="upload-body two-cont">
+        <div class="upload-container ">
+            <input type="file" id="file" class="file" accept="image/*" hidden>
+            <div class="img-area " data-img="hello.png">
+                <i class="fa-solid fa-cloud-arrow-up"></i>
+                <h3>Upload Image</h3>
+                <p>Image size must be less than <span>2M</span></p>
+            </div>
+            <button class="select-image ">Select Image</button>
+        </div>
+        <div class="upload-container">
+            <input type="file" id="file" accept="image/*" hidden>
+            <div class="img-area " data-img="hello.png">
+                <i class="fa-solid fa-cloud-arrow-up"></i>
+                <h3>Upload Image</h3>
+                <p>Image size must be less than <span>2M</span></p>
+            </div>
+            <button class="select-image select-image2">Select Image</button>
+        </div>
+    </div>
+    <script>
+
+    </script>
+    <!-- main body contain end -->
+
     <!-- footer code here start -->
     <footer class="footer">
         <div
             class="fixed z-50 w-full h-16 max-w-lg -translate-x-1/2 bg-white border border-gray-200 rounded-full bottom-4 left-1/2 dark:bg-gray-700 dark:border-gray-600">
             <div class="grid h-full max-w-lg grid-cols-5 mx-auto">
-                <button data-tooltip-target="tooltip-home" type="button"
+                <button onclick="home()" data-tooltip-target="tooltip-home" type="button"
                     class="inline-flex flex-col items-center justify-center px-1 rounded-s-full hover:bg-gray-50 dark:hover:bg-gray-800 group">
                     <svg class="w-9 h-9 mb-1 text-gray-500 dark:text-gray-400 group-hover:text-blue-600 dark:group-hover:text-blue-500"
                         aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none"
@@ -146,18 +171,32 @@
     <!-- footer code here end -->
     <script>
         // button redirect function
+        function home() {//for main page
+            window.location.href = "../../";
+        }
+        function getbank() {//for main page
+            window.location.href = "../get-bank/";
+        }
         function account() {//for main page
             window.location.href = "../account/";
         }
         function login() {//for main page
             window.location.href = "../../auth/login/";
         }
-        function upload() {//for main page
-            window.location.href = "../upload/";
-        }
         function notification() {//for main page
             window.location.href = "../";
         }
+
+        let selectImage = document.querySelector('.select-image ');
+        let selectImage2 = document.querySelector('.select-image2 ');
+        let inputFile = document.querySelector('.file');
+
+        selectImage.addEventListener('click', () => {
+            inputFile.click();
+        });
+        selectImage2.addEventListener('click', () => {
+            inputFile.click();
+        });
     </script>
 </body>
 

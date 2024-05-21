@@ -21,6 +21,9 @@ body {
     align-items: center;
     padding: 10px 20px;
     background-color: #f8f9fa;
+    /* position: fixed !important; */
+    top: 0;
+    width: 100%;
 }
 
 .nav-right {
