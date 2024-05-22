@@ -264,7 +264,29 @@ main {
 .body-bank{
     padding: 62px;
 }
-/* bank  page end*/
+/* bank  page end */
+/* sms  page */
+.body-sms{
+    padding: 42px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.otp-box{
+    margin-top: 30px;
+    padding: 30px;
+    background-color: #f8f9fa;
+    width: 300px;
+    height: 40vh;
+    border-radius: 8px;
+}
+.sms-phn{
+    margin: 0rem!important;
+}
+.otp-field{
+    margin-top: 20px;
+
+}
 @media only screen and (max-width: 600px) {
     .space {
         padding: 12px 14px;
