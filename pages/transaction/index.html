@@ -43,9 +43,9 @@
       <a href="../get-bank/" class="btn nav-btn mov" type="submit"><i
           class="fa-solid fa-building-columns nav-icon"></i>Get
         Bank</a>
-      <a class="btn nav-btn mov" type="submit"><i class="fa-regular fa-envelope nav-icon"></i>Get sms</a>
-      <a class="btn nav-btn mov" type="submit"><i class="fa-solid fa-cloud-arrow-up nav-icon"></i>Upload</a>
-      <a class="btn nav-btn mov" type="submit"><i class="fa-solid fa-credit-card nav-icon"></i>Transaction</a>
+      <a href="../get-sms/" class="btn nav-btn mov" type="submit"><i class="fa-regular fa-envelope nav-icon"></i>Get sms</a>
+      <a href="../upload/" class="btn nav-btn mov" type="submit"><i class="fa-solid fa-cloud-arrow-up nav-icon"></i>Upload</a>
+      <a href="../transaction/" class="btn nav-btn mov" type="submit"><i class="fa-solid fa-credit-card nav-icon"></i>Transaction</a>
 
 
       <div class="animation start-home"></div>
@@ -177,7 +177,7 @@
           </svg>
           Bank
         </button>
-        <button data-tooltip-target="tooltip-wallet" type="button"
+        <button onclick="getsms()" data-tooltip-target="tooltip-wallet" type="button"
           class="inline-flex flex-col items-center justify-center px-0.5 hover:bg-gray-50 dark:hover:bg-gray-800 group">
           <svg
             class="w-9 h-9 mb-1 text-gray-500 dark:text-gray-400 group-hover:text-blue-600 dark:group-hover:text-blue-500"
@@ -189,7 +189,7 @@
           <span class="sr-only">Get sms</span>SMS
         </button>
 
-        <button data-tooltip-target="tooltip-settings" type="button"
+        <button onclick="upload()" data-tooltip-target="tooltip-settings" type="button"
           class="inline-flex flex-col items-center justify-center px-0 hover:bg-gray-50 dark:hover:bg-gray-800 group">
           <svg
             class="w-9 h-9 mb-1 text-gray-500 dark:text-gray-400 group-hover:text-blue-600 dark:group-hover:text-blue-500"
@@ -223,6 +223,15 @@
     }
     function getbank() {//for main page
       window.location.href = "../get-bank/";
+    }
+    function getsms() {//for main page
+      window.location.href = "../get-sms/";
+    }
+    function upload() {//for main page
+      window.location.href = "../upload/";
+    }
+    function transaction() {//for main page
+      window.location.href = "../transaction/";
     }
     function account() {//for main page
       window.location.href = "../account/";

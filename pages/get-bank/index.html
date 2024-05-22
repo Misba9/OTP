@@ -42,13 +42,12 @@
             <!-- <a class="navbar-brand ">
                 <img src="" alt="logo" width="30" height="24" class="d-inline-block align-text-top ">Navbar
             </a> -->
-            <a class="btn nav-btn mov" id="nav-tab" type="submit"><i class="fa-solid fa-house nav-icon"></i>Home</a>
-            <a href="pages/get-bank/" class="btn nav-btn mov" type="submit"><i
-                    class="fa-solid fa-building-columns nav-icon"></i>Get
-                Bank</a>
-            <a class="btn nav-btn mov" type="submit"><i class="fa-regular fa-envelope nav-icon"></i>Get sms</a>
+            <a href="../../" class="btn nav-btn mov" id="nav-tab" type="submit"><i class="fa-solid fa-house nav-icon"></i>Home</a>
+            <a href="" class="btn nav-btn mov" type="submit"><i
+                class="fa-solid fa-building-columns nav-icon"></i>Get Bank</a>
+            <a href="../get-sms/" class="btn nav-btn mov" type="submit"><i class="fa-regular fa-envelope nav-icon"></i>Get sms</a>
             <a href="../upload/" class="btn nav-btn mov" type="submit"><i class="fa-solid fa-cloud-arrow-up nav-icon"></i>Upload</a>
-            <a class="btn nav-btn mov" type="submit"><i class="fa-solid fa-credit-card nav-icon"></i>Transaction</a>
+            <a href="../transaction/" class="btn nav-btn mov" type="submit"><i class="fa-solid fa-credit-card nav-icon"></i>Transaction</a>
 
 
             <div class="animation start-home"></div>
@@ -166,7 +165,7 @@
         <div
             class="fixed z-50 w-full h-16 max-w-lg -translate-x-1/2 bg-white border border-gray-200 rounded-full bottom-4 left-1/2 dark:bg-gray-700 dark:border-gray-600">
             <div class="grid h-full max-w-lg grid-cols-5 mx-auto">
-                <button data-tooltip-target="tooltip-home" type="button"
+                <button onclick="home()" data-tooltip-target="tooltip-home" type="button"
                     class="inline-flex flex-col items-center justify-center px-1 rounded-s-full hover:bg-gray-50 dark:hover:bg-gray-800 group">
                     <svg class="w-9 h-9 mb-1 text-gray-500 dark:text-gray-400 group-hover:text-blue-600 dark:group-hover:text-blue-500"
                         aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none"
@@ -176,7 +175,7 @@
                     </svg>
                     Home
                 </button>
-                <button onclick="getbank()" data-tooltip-target="tooltip-bank" type="button"
+                <button onclick="" data-tooltip-target="tooltip-bank" type="button"
                     class="inline-flex flex-col items-center justify-center px-1 hover:bg-gray-50 dark:hover:bg-gray-800 group">
                     <svg class="w-9 h-7 mb-1 text-gray-500 dark:text-gray-400 group-hover:text-blue-600 dark:group-hover:text-blue-500"
                         aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 20 20">
@@ -187,7 +186,7 @@
                     </svg>
                     Bank
                 </button>
-                <button data-tooltip-target="tooltip-wallet" type="button"
+                <button onclick="getsms()" data-tooltip-target="tooltip-wallet" type="button"
                     class="inline-flex flex-col items-center justify-center px-0.5 hover:bg-gray-50 dark:hover:bg-gray-800 group">
                     <svg class="w-9 h-9 mb-1 text-gray-500 dark:text-gray-400 group-hover:text-blue-600 dark:group-hover:text-blue-500"
                         aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor"
@@ -198,7 +197,7 @@
                     <span class="sr-only">Get sms</span>SMS
                 </button>
 
-                <button data-tooltip-target="tooltip-settings" type="button"
+                <button onclick="upload()" data-tooltip-target="tooltip-settings" type="button"
                     class="inline-flex flex-col items-center justify-center px-0 hover:bg-gray-50 dark:hover:bg-gray-800 group">
                     <svg class="w-9 h-9 mb-1 text-gray-500 dark:text-gray-400 group-hover:text-blue-600 dark:group-hover:text-blue-500"
                         aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor"
@@ -209,7 +208,7 @@
                     </svg>
                     Upload
                 </button>
-                <button onclick="" data-tooltip-target="tooltip-profile" type="button"
+                <button onclick="transaction()" data-tooltip-target="tooltip-profile" type="button"
                     class="inline-flex flex-col items-center justify-center px-1 rounded-e-full hover:bg-gray-50 dark:hover:bg-gray-800 group">
                     <svg class="w-9 h-9 mb-1 text-gray-500 dark:text-gray-400 group-hover:text-blue-600 dark:group-hover:text-blue-500"
                         aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor"
@@ -231,11 +230,20 @@
         function login() {//for main page
             window.location.href = "../../auth/login/";
         }
+        function notification() {//for main page
+            window.location.href = "../";
+        }
+        function home() {//for main page
+            window.location.href = "../../";
+        }
+        function getsms() {//for main page
+            window.location.href = "../get-sms/";
+        }
         function upload() {//for main page
             window.location.href = "../upload/";
         }
-        function notification() {//for main page
-            window.location.href = "../";
+        function transaction() {//for main page
+            window.location.href = "../transaction/";
         }
     </script>
 </body>
