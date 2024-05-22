@@ -260,6 +260,11 @@ main {
     font-weight: 500;
 }
 /* transaction  page end*/
+/* bank  page start*/
+.body-bank{
+    padding: 22px;
+}
+/* bank  page end*/
 @media only screen and (max-width: 600px) {
     .space {
         padding: 12px 14px;
