@@ -214,12 +214,52 @@ main {
     cursor: pointer;
     transition: all 0.3s ease;
 }
+.submit-image {
+    /* width: 20%; */
+    padding: 12px 34px;
+    margin-bottom: 7rem ;
+    border-radius: 15px;
+    background-color: blue;
+    color: #fff;
+    font-weight: 500;
+    font-size: 18px;
+    border: none;
+}
 
+.submit-image:hover {
+    background-color: #4758f5;
+}
 .select-image:hover {
-    background-color: #3344dd;
+    background-color: #5b6bff;
 }
 
 /* upload  page end*/
+/* transaction  page start*/
+.body-tran{
+    padding: 22px;
+}
+.cont-tran{
+    margin-bottom: 20px;
+    display: flex;
+}
+.view-rig{
+    position: absolute;
+    right: 26px!important;
+}
+.link{
+    cursor: pointer;
+    color: rgb(47, 47, 250);
+}
+.link:hover{
+    text-decoration: underline;
+    color: rgb(47, 47, 250);
+}
+
+.title-tran{
+    font-size: 1.5rem;
+    font-weight: 500;
+}
+/* transaction  page end*/
 @media only screen and (max-width: 600px) {
     .space {
         padding: 12px 14px;

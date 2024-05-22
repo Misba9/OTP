@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>OTP with zaker</title>
+  <!-- style -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.3.0/flowbite.min.js"></script>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.3.0/flowbite.min.css" rel="stylesheet" />
+  <link rel="stylesheet" href="../../css/style.css">
+  <link rel="stylesheet" href="../../css/pages.css">
+  <!-- for icons -->
+  <script src="https://kit.fontawesome.com/08aec0b5cd.js" crossorigin="anonymous"></script>
+
+  <script src="https://cdn.jsdelivr.net/gh/alpine-collective/alpine-magic-helpers@0.5.x/dist/component.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/gh/alpinejs/alpine@v2.7.3/dist/alpine.min.js" defer=""></script>
+
+  <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+    integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+    crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js"
+    integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+    crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js"
+    integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+    crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css"
+    integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+</head>
+
+<body>
+  <!-- nav bar code here start -->
+  <nav class="navbar navbar-light fixed ">
+    <form class="container-fluid nav">
+      <!-- <a class="navbar-brand ">
+                <img src="" alt="logo" width="30" height="24" class="d-inline-block align-text-top ">Navbar
+            </a> -->
+      <a href="../../" class="btn nav-btn mov" id="nav-tab" type="submit"><i
+          class="fa-solid fa-house nav-icon"></i>Home</a>
+      <a href="../get-bank/" class="btn nav-btn mov" type="submit"><i
+          class="fa-solid fa-building-columns nav-icon"></i>Get
+        Bank</a>
+      <a class="btn nav-btn mov" type="submit"><i class="fa-regular fa-envelope nav-icon"></i>Get sms</a>
+      <a class="btn nav-btn mov" type="submit"><i class="fa-solid fa-cloud-arrow-up nav-icon"></i>Upload</a>
+      <a class="btn nav-btn mov" type="submit"><i class="fa-solid fa-credit-card nav-icon"></i>Transaction</a>
+
+
+      <div class="animation start-home"></div>
+    </form>
+    <div class="nav-right">
+      <button onclick="notification()" @click="openNotificationsPanel"
+        class="p-2 transition-colors duration-200 rounded-full text-primary-lighter bg-primary-50 hover:text-primary hover:bg-primary-100 dark:hover:text-light dark:hover:bg-primary-dark dark:bg-dark focus:outline-none focus:bg-primary-100 dark:focus:bg-primary-dark focus:ring-primary-darker ">
+        <span class="sr-only">Open Notification panel</span>
+        <svg class="w-7 h-7" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor"
+          aria-hidden="true">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+            d="M15 17h5l-1.405-1.405A2.032 2.032 0 0118 14.158V11a6.002 6.002 0 00-4-5.659V5a2 2 0 10-4 0v.341C7.67 6.165 6 8.388 6 11v3.159c0 .538-.214 1.055-.595 1.436L4 17h5m6 0v1a3 3 0 11-6 0v-1m6 0H9">
+          </path>
+        </svg>
+      </button>
+      <div class="dropdown">
+        <button class="btn nav-btn" type="button" id="dropdownMenu2" data-toggle="dropdown" aria-haspopup="true"
+          aria-expanded="false">
+          <img class=" w-10 h-10 rounded-full"
+            src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80"
+            alt="Ahmed ">
+        </button>
+        <div class="dropdown-menu" aria-labelledby="dropdownMenu2">
+          <button onclick="account()" class="dropdown-item" type="button">Your Profile</button>
+          <button onclick="login()" class="dropdown-item" type="button">Login</button>
+        </div>
+      </div>
+    </div>
+  </nav>
+  <style>
+
+  </style>
+  <!-- nav bar code here end -->
+
+  <!-- main body contain start -->
+  <div class="body-tran">
+    <div class="cont-tran">
+      <span class="title-tran">Transaction</span>
+      <span href="" class="view-rig link">View All</span>
+    </div>
+    <div class="grid grid-cols-1 gap-8  lg:grid-cols-2 xl:grid-cols-4 ">
+      <!-- Value card -->
+      <div class="flex items-center justify-between p-4 bg-white rounded-md dark:bg-darker">
+        <!-- <i class="fa-solid fa-arrow-up"></i> -->
+        <div>
+          <h6 class="text-xl font-semibold">withdrawal</h6>
+          <span class="font-medium dark:text-primary-light">
+            24/05/2024 
+          </span>
+          <span class="font-medium inline-block px-2 ml-2 ">
+            5:40 pm
+          </span>
+        </div>
+        <div>
+          <span class="text-3xl font-semibold">-200</span>
+        </div>
+      </div>
+      <div class="flex items-center justify-between p-4 bg-white rounded-md dark:bg-darker">
+        <div>
+          <h6 class="text-xl font-semibold">deposit</h6>
+          <span class="font-medium dark:text-primary-light">
+            24/05/2024 
+          </span>
+          <span class="font-medium inline-block px-2 ml-2 ">
+            5:40 pm
+          </span>
+        </div>
+        <div>
+          <span class="text-3xl font-semibold">+200</span>
+        </div>
+      </div>
+      <div class="flex items-center justify-between p-4 bg-white rounded-md dark:bg-darker">
+        <div>
+          <h6 class="text-xl font-semibold">sms wallet</h6>
+          <span class="font-medium dark:text-primary-light">
+            24/05/2024 
+          </span>
+          <span class="font-medium inline-block px-2 ml-2 ">
+            5:40 pm
+          </span>
+        </div>
+        <div>
+          <span class="text-3xl font-semibold">+200</span>
+        </div>
+      </div>
+      <div class="flex items-center justify-between p-4 bg-white rounded-md dark:bg-darker">
+        <div>
+          <h6 class="text-xl font-semibold">sms wallet</h6>
+          <span class="font-medium dark:text-primary-light">
+            24/05/2024 
+          </span>
+          <span class="font-medium inline-block px-2 ml-2 ">
+            5:40 pm
+          </span>
+        </div>
+        <div>
+          <span class="text-3xl font-semibold">-200</span>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- main body contain end -->
+
+  <!-- footer code here start -->
+  <footer class="footer">
+    <div
+      class="fixed z-50 w-full h-16 max-w-lg -translate-x-1/2 bg-white border border-gray-200 rounded-full bottom-4 left-1/2 dark:bg-gray-700 dark:border-gray-600">
+      <div class="grid h-full max-w-lg grid-cols-5 mx-auto">
+        <button onclick="home()" data-tooltip-target="tooltip-home" type="button"
+          class="inline-flex flex-col items-center justify-center px-1 rounded-s-full hover:bg-gray-50 dark:hover:bg-gray-800 group">
+          <svg
+            class="w-9 h-9 mb-1 text-gray-500 dark:text-gray-400 group-hover:text-blue-600 dark:group-hover:text-blue-500"
+            aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none"
+            viewBox="0 0 24 24">
+            <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+              d="m4 12 8-8 8 8M6 10.5V19a1 1 0 0 0 1 1h3v-3a1 1 0 0 1 1-1h2a1 1 0 0 1 1 1v3h3a1 1 0 0 0 1-1v-8.5" />
+          </svg>
+          Home
+        </button>
+        <button onclick="getbank()" data-tooltip-target="tooltip-bank" type="button"
+          class="inline-flex flex-col items-center justify-center px-1 hover:bg-gray-50 dark:hover:bg-gray-800 group">
+          <svg
+            class="w-9 h-7 mb-1 text-gray-500 dark:text-gray-400 group-hover:text-blue-600 dark:group-hover:text-blue-500"
+            aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 20 20">
+            <path
+              d="M11.074 4 8.442.408A.95.95 0 0 0 7.014.254L2.926 4h8.148ZM9 13v-1a4 4 0 0 1 4-4h6V6a1 1 0 0 0-1-1H1a1 1 0 0 0-1 1v13a1 1 0 0 0 1 1h17a1 1 0 0 0 1-1v-2h-6a4 4 0 0 1-4-4Z" />
+            <path
+              d="M19 10h-6a2 2 0 0 0-2 2v1a2 2 0 0 0 2 2h6a1 1 0 0 0 1-1v-3a1 1 0 0 0-1-1Zm-4.5 3.5a1 1 0 1 1 0-2 1 1 0 0 1 0 2ZM12.62 4h2.78L12.539.41a1.086 1.086 0 1 0-1.7 1.352L12.62 4Z" />
+          </svg>
+          Bank
+        </button>
+        <button data-tooltip-target="tooltip-wallet" type="button"
+          class="inline-flex flex-col items-center justify-center px-0.5 hover:bg-gray-50 dark:hover:bg-gray-800 group">
+          <svg
+            class="w-9 h-9 mb-1 text-gray-500 dark:text-gray-400 group-hover:text-blue-600 dark:group-hover:text-blue-500"
+            aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor"
+            viewBox="0 0 24 24">
+            <path
+              d="M17 6h-2V5h1a1 1 0 1 0 0-2h-2a1 1 0 0 0-1 1v2h-.541A5.965 5.965 0 0 1 14 10v4a1 1 0 1 1-2 0v-4c0-2.206-1.794-4-4-4-.075 0-.148.012-.22.028C7.686 6.022 7.596 6 7.5 6A4.505 4.505 0 0 0 3 10.5V16a1 1 0 0 0 1 1h7v3a1 1 0 0 0 1 1h2a1 1 0 0 0 1-1v-3h5a1 1 0 0 0 1-1v-6c0-2.206-1.794-4-4-4Zm-9 8.5H7a1 1 0 1 1 0-2h1a1 1 0 1 1 0 2Z" />
+          </svg>
+          <span class="sr-only">Get sms</span>SMS
+        </button>
+
+        <button data-tooltip-target="tooltip-settings" type="button"
+          class="inline-flex flex-col items-center justify-center px-0 hover:bg-gray-50 dark:hover:bg-gray-800 group">
+          <svg
+            class="w-9 h-9 mb-1 text-gray-500 dark:text-gray-400 group-hover:text-blue-600 dark:group-hover:text-blue-500"
+            aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor"
+            viewBox="0 0 24 24">
+            <path fill-rule="evenodd"
+              d="M12 3a1 1 0 0 1 .78.375l4 5a1 1 0 1 1-1.56 1.25L13 6.85V14a1 1 0 1 1-2 0V6.85L8.78 9.626a1 1 0 1 1-1.56-1.25l4-5A1 1 0 0 1 12 3ZM9 14v-1H5a2 2 0 0 0-2 2v4a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-4a2 2 0 0 0-2-2h-4v1a3 3 0 1 1-6 0Zm8 2a1 1 0 1 0 0 2h.01a1 1 0 1 0 0-2H17Z"
+              clip-rule="evenodd" />
+          </svg>
+          Upload
+        </button>
+        <button onclick="" data-tooltip-target="tooltip-profile" type="button"
+          class="inline-flex flex-col items-center justify-center px-1 rounded-e-full hover:bg-gray-50 dark:hover:bg-gray-800 group">
+          <svg
+            class="w-9 h-9 mb-1 text-gray-500 dark:text-gray-400 group-hover:text-blue-600 dark:group-hover:text-blue-500"
+            aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor"
+            viewBox="0 0 24 24">
+            <path fill-rule="evenodd"
+              d="M7 2a2 2 0 0 0-2 2v1a1 1 0 0 0 0 2v1a1 1 0 0 0 0 2v1a1 1 0 1 0 0 2v1a1 1 0 1 0 0 2v1a1 1 0 1 0 0 2v1a2 2 0 0 0 2 2h11a2 2 0 0 0 2-2V4a2 2 0 0 0-2-2H7Zm3 8a3 3 0 1 1 6 0 3 3 0 0 1-6 0Zm-1 7a3 3 0 0 1 3-3h2a3 3 0 0 1 3 3 1 1 0 0 1-1 1h-6a1 1 0 0 1-1-1Z"
+              clip-rule="evenodd" />
+          </svg>Transaction
+        </button>
+      </div>
+    </div>
+  </footer>
+  <!-- footer code here end -->
+  <script>
+    // button redirect function
+    function home() {//for main page
+      window.location.href = "../../";
+    }
+    function getbank() {//for main page
+      window.location.href = "../get-bank/";
+    }
+    function account() {//for main page
+      window.location.href = "../account/";
+    }
+    function login() {//for main page
+      window.location.href = "../../auth/login/";
+    }
+    function notification() {//for main page
+      window.location.href = "../";
+    }
+
+    let selectImage = document.querySelector('.select-image ');
+    let selectImage2 = document.querySelector('.select-image2 ');
+    let inputFile = document.querySelector('.file');
+
+    selectImage.addEventListener('click', () => {
+      inputFile.click();
+    });
+    selectImage2.addEventListener('click', () => {
+      inputFile.click();
+    });
+  </script>
+</body>
+
+</html>
