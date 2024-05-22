@@ -42,12 +42,16 @@
             <!-- <a class="navbar-brand ">
                 <img src="" alt="logo" width="30" height="24" class="d-inline-block align-text-top ">Navbar
             </a> -->
-            <a href="../../" class="btn nav-btn mov" id="nav-tab" type="submit"><i class="fa-solid fa-house nav-icon"></i>Home</a>
-            <a href="" class="btn nav-btn mov" type="submit"><i
-                class="fa-solid fa-building-columns nav-icon"></i>Get Bank</a>
-            <a href="../get-sms/" class="btn nav-btn mov" type="submit"><i class="fa-regular fa-envelope nav-icon"></i>Get sms</a>
-            <a href="../upload/" class="btn nav-btn mov" type="submit"><i class="fa-solid fa-cloud-arrow-up nav-icon"></i>Upload</a>
-            <a href="../transaction/" class="btn nav-btn mov" type="submit"><i class="fa-solid fa-credit-card nav-icon"></i>Transaction</a>
+            <a href="../../" class="btn nav-btn mov" id="nav-tab" type="submit"><i
+                    class="fa-solid fa-house nav-icon"></i>Home</a>
+            <a href="" class="btn nav-btn mov" type="submit"><i class="fa-solid fa-building-columns nav-icon"></i>Get
+                Bank</a>
+            <a href="../get-sms/" class="btn nav-btn mov" type="submit"><i
+                    class="fa-regular fa-envelope nav-icon"></i>Get sms</a>
+            <a href="../upload/" class="btn nav-btn mov" type="submit"><i
+                    class="fa-solid fa-cloud-arrow-up nav-icon"></i>Upload</a>
+            <a href="../transaction/" class="btn nav-btn mov" type="submit"><i
+                    class="fa-solid fa-credit-card nav-icon"></i>Transaction</a>
 
 
             <div class="animation start-home"></div>
@@ -83,81 +87,115 @@
     <!-- nav bar code here end -->
     <!-- main code here start -->
     <div class="body-bank">
-    <form>
-        <div class="row">
-          <div class="col">
-            <input type="text" class="form-control" placeholder="First name">
-          </div>
-          <div class="col">
-            <input type="text" class="form-control" placeholder="Last name">
-          </div>
+        <form>
+            <h3>Personal Details</h3>
+            <div class="row">
+                <div class="col">
+                    <input type="text" class="form-control" placeholder="First name">
+                </div>
+                <div class="col">
+                    <input type="text" class="form-control" placeholder="Last name">
+                </div>
+            </div>
+            <div class="form-row">
+                <div class="form-group col-md-6">
+                    <label for="inputEmail4">Email</label>
+                    <input type="email" class="form-control" id="inputEmail4" placeholder="Email">
+                </div>
+                <!-- <div class="form-group col-md-6">
+              <label for="inputPassword4">Password</label>
+              <input type="password" class="form-control" id="inputPassword4" placeholder="Password">
+            </div> -->
+                <div class="form-group col-md-6">
+                    <label for="inputPassword4">Phone</label>
+                    <input id="phone" class="form-control" type="tel" placeholder="987654XXX0" name="phone" />
+                </div>
+            </div>
+            <h3>Contact Details</h3>
+            <div class="form-group">
+                <label for="inputAddress">Address</label>
+                <input type="text" class="form-control" id="inputAddress" placeholder="1234 Main St">
+            </div>
+            <div class="form-group">
+                <label for="inputAddress2">Address 2</label>
+                <input type="text" class="form-control" id="inputAddress2" placeholder="Apartment, studio, or floor">
+            </div>
+            <div class="form-row">
+                <div class="form-group col-md-6">
+                    <label for="inputCity">City</label>
+                    <input type="text" class="form-control" id="inputCity">
+                </div>
+                <div class="form-group col-md-4">
+                    <label for="inputState">State</label>
+                    <select id="inputState" class="form-control">
+                        <option selected>Choose...</option>
+                        <option>Andhra Pradesh</option>
+                        <option>Arunachal Pradesh</option>
+                        <option>Assam</option>
+                        <option>Bihar</option>
+                        <option>Chhattisgarh</option>
+                        <option>Goa</option>
+                        <option>Gujarat</option>
+                        <option>Haryana</option>
+                        <option>Himachal Pradesh</option>
+                        <option>Jharkhand</option>
+                        <option>Karnataka</option>
+                        <option>Kerala</option>
+                        <option>Madhya Pradesh</option>
+                        <option>Maharashtra</option>
+                        <option>Manipur</option>
+                        <option>Meghalaya</option>
+                        <option>Mizoram</option>
+                        <option>Nagaland</option>
+                        <option>Odisha</option>
+                        <option>Punjab</option>
+                        <option>Rajasthan</option>
+                        <option>Sikkim</option>
+                        <option>Tamil Nadu</option>
+                        <option>Telangana</option>
+                        <option>Tripura</option>
+                        <option>Uttar Pradesh</option>
+                        <option>Uttarakhand</option>
+                        <option>West Bengal </option>
+                    </select>
+                </div>
+                <div class="form-group col-md-2">
+                    <label for="inputZip">Zip</label>
+                    <input type="text" class="form-control" id="inputZip">
+                </div>
+            </div>
+            <h3>Account Information</h3>
+        <div class="form-row">
+            <div class="form-group col-md-4">
+                <label for="inputState">Account Type</label>
+                <select id="inputState" class="form-control">
+                    <option selected>Please Select</option>
+                    <option>Personal Account</option>
+                    <option>Savings Account</option>
+                    <option>Salary Account</option>
+                </select>
+            </div>
+            <div class="form-group col-md-4">
+                <label for="inputState">Account Category</label>
+                <select id="inputState" class="form-control">
+                    <option selected>Please Select</option>
+                    <option selected>Individual</option>
+                    <option>Joint</option>
+                </select>
+            </div>
         </div>
         <div class="form-row">
             <div class="form-group col-md-6">
-              <label for="inputEmail4">Email</label>
-              <input type="email" class="form-control" id="inputEmail4" placeholder="Email">
+                <label for="input">Account Number</label>
+                <input id="phone" class="form-control" type="tel" placeholder="9876 54XX X000" name="phone" />
             </div>
             <div class="form-group col-md-6">
-              <label for="inputPassword4">Password</label>
-              <input type="password" class="form-control" id="inputPassword4" placeholder="Password">
+                <label for="input">IFSC Code </label>
+                <input id="text" class="form-control" type="text" placeholder="bank54XXX000" name="phone" />
             </div>
-          </div>
-          <div class="form-group">
-            <label for="inputAddress">Address</label>
-            <input type="text" class="form-control" id="inputAddress" placeholder="1234 Main St">
-          </div>
-          <div class="form-group">
-            <label for="inputAddress2">Address 2</label>
-            <input type="text" class="form-control" id="inputAddress2" placeholder="Apartment, studio, or floor">
-          </div>
-          <div class="form-row">
-            <div class="form-group col-md-6">
-              <label for="inputCity">City</label>
-              <input type="text" class="form-control" id="inputCity">
-            </div>
-            <div class="form-group col-md-4">
-              <label for="inputState">State</label>
-              <select id="inputState" class="form-control">
-                <option selected>Choose...</option>
-                <option>Andhra Pradesh</option>
-                <option>Arunachal Pradesh</option>
-                <option>Assam</option>
-                <option>Bihar</option>
-                <option>Chhattisgarh</option>
-                <option>Goa</option>
-                <option>Gujarat</option>
-                <option>Haryana</option>
-                <option>Himachal Pradesh</option>
-                <option>Jharkhand</option>
-                <option>Karnataka</option>
-                <option>Kerala</option>
-                <option>Madhya Pradesh</option>
-                <option>Maharashtra</option>
-                <option>Manipur</option>
-                <option>Meghalaya</option>
-                <option>Mizoram</option>
-                <option>Nagaland</option>
-                <option>Odisha</option>
-                <option>Punjab</option>
-                <option>Rajasthan</option>
-                <option>Sikkim</option>
-                <option>Tamil Nadu</option>
-                <option>Telangana</option>
-                <option>Tripura</option>
-                <option>Uttar Pradesh</option>
-                <option>Uttarakhand</option>
-                <option>West Bengal	</option>
-              </select>
-            </div>
-            <div class="form-group col-md-2">
-              <label for="inputZip">Zip</label>
-              <input type="text" class="form-control" id="inputZip">
-            </div>
-          </div>
-
-
-          <button type="submit" class="btn btn-primary my-1">Submit</button>
-      </form>
+        </div>
+            <button type="submit" class="btn btn-primary my-1">Submit</button>
+        </form>
     </div>
     <!-- main code here end -->
     <!-- footer code here start -->

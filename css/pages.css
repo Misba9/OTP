@@ -262,7 +262,7 @@ main {
 /* transaction  page end*/
 /* bank  page start*/
 .body-bank{
-    padding: 22px;
+    padding: 62px;
 }
 /* bank  page end*/
 @media only screen and (max-width: 600px) {
